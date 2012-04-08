@@ -27,11 +27,13 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
+ARCH_ARM_HAVE_VFP := true
 
 # Flags
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60 -DQCOM_HARDWARE
+TARGET_EXTRA_CFLAGS += $(call cc-option, -mtune=cortex-a8)
 
 # Scorpion optimizations
 TARGET_USE_SCORPION_BIONIC_OPTIMIZATION := true
@@ -69,6 +71,7 @@ TARGET_HAVE_BYPASS := false
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_OVERLAY := true
 TARGET_QCOM_HDMI_OUT := true
+TARGET_GRALLOC_USES_ASHMEM := true
 BOARD_EGL_CFG := device/htc/msm8660-common/configs/egl.cfg
 
 # FM Radio
