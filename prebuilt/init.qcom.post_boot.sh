@@ -132,6 +132,12 @@ case "$target" in
         ;;
 esac
 
+# Tweak IntelliDemand governor by faux123 (kernel must include this governor!)
+if [`grep -q intellidemand /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors`] ; then
+	echo 20000 > /sys/devices/system/cpu/cpufreq/intellidemand/sampling_rate
+	echo 60 > /sys/devices/system/cpu/cpufreq/intellidemand/up_threshold
+fi
+
 case "$target" in
     "msm7627_ffa" | "msm7627_surf" | "msm7627a" | "msm7627_6x")
         echo 25000 > /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
