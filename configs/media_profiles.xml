@@ -127,7 +127,7 @@
 
         <EncoderProfile quality="720p" fileFormat="mp4" duration="30">
             <Video codec="h264"
-                   bitRate="10000000"
+                   bitRate="12500000"
                    width="1280"
                    height="720"
                    frameRate="30" />
@@ -139,7 +139,7 @@
 
         <EncoderProfile quality="1080p" fileFormat="mp4" duration="30">
             <Video codec="h264"
-                   bitRate="15000000"
+                   bitRate="20000000"
                    width="1920"
                    height="1088"
                    frameRate="30" />
@@ -190,7 +190,7 @@
 
         <EncoderProfile quality="timelapse720p" fileFormat="mp4" duration="30">
             <Video codec="h264"
-                   bitRate="8000000"
+                   bitRate="12500000"
                    width="1280"
                    height="720"
                    frameRate="30" />
@@ -203,7 +203,7 @@
 
         <EncoderProfile quality="timelapse1080p" fileFormat="mp4" duration="30">
             <Video codec="h264"
-                   bitRate="12000000"
+                   bitRate="20000000"
                    width="1920"
                    height="1088"
                    frameRate="30" />
@@ -339,7 +339,7 @@
          or query the capabilities of the codec at all if it is disabled
     -->
     <VideoEncoderCap name="h264" enabled="true"
-        minBitRate="64000" maxBitRate="15000000"
+        minBitRate="64000" maxBitRate="20000000"
         minFrameWidth="176" maxFrameWidth="1920"
         minFrameHeight="144" maxFrameHeight="1088"
         minFrameRate="15" maxFrameRate="30" />
