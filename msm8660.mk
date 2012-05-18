@@ -59,6 +59,8 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libOmxVdec \
     libOmxVenc \
+    libOmxAacEnc \
+    libOmxAmrEnc \
     libstagefrighthw
 
 # HDMI
