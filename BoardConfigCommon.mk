@@ -60,6 +60,10 @@ WIFI_DRIVER_MODULE_PATH          := "/system/lib/modules/bcmdhd.ko"
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
+# Audio
+TARGET_USES_QCOM_LPA := true
+COMMON_GLOBAL_CFLAGS += -DWITH_QCOM_LPA
+
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QCOM_GPS := true
