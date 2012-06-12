@@ -70,6 +70,8 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 # Workaround to avoid issues with legacy liblights on QCOM platforms
 TARGET_PROVIDES_LIBLIGHTS := true
 
+BOARD_HAVE_HTC_FFC := true
+
 # Filesystem
 BOARD_VOLD_MAX_PARTITIONS := 36
 
