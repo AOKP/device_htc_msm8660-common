@@ -32,7 +32,7 @@ ARCH_ARM_HAVE_VFP := true
 # Flags
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
-COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60 -DQCOM_HARDWARE
+COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60 -DQCOM_HARDWARE -DNO_QCOM_MVS
 TARGET_EXTRA_CFLAGS += $(call cc-option, -mtune=cortex-a8)
 
 # Scorpion optimizations
